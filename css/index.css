@@ -1,0 +1,190 @@
+/* global rules */
+* {
+    --webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* main page */
+header {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    font-weight: bold;
+
+}
+
+header ul {
+    display: flex;
+    gap: 15px;
+}
+
+header ul li a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+header li.sign a {
+    background-color: white;
+    padding: 5px 10px;
+    color: black;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#logout {
+    background-color: white;
+    padding: 5px 10px;
+    color: black;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#membername {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.second-ul {
+    display: none;
+    align-items: center;
+}
+
+/* end main page */
+/* log-in page */
+.log-in-div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    width: 450px;
+    border-radius: 8px;
+}
+
+.log-in-div h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.log-in-div input {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 30px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.log-in-div input[type="text"],
+[type="password"] {
+    padding: 10px 5px;
+}
+
+.log-in-div input[type="button"] {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.log-in-div input[type="button"]:hover {
+    background-color: white;
+    color: black;
+}
+
+.log-in-div .warning {
+    text-align: start;
+    margin: 0;
+    font-size: 13px;
+    color: red;
+    padding: 0 0 0 5px;
+}
+
+/* end log-in page */
+/* sign-up page */
+.sign-up-div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    width: 450px;
+    border-radius: 8px;
+}
+
+.sign-up-div h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sign-up-div input {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 30px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.sign-up-div input[type="text"],
+[type="password"] {
+    padding: 10px 5px;
+}
+
+.sign-up-div input[type="button"] {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.sign-up-div input[type="button"]:hover {
+    background-color: white;
+    color: black;
+}
+
+/* end sign-up page */

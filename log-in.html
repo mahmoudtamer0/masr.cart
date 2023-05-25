@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/normaliz.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/index.css">
+        <title>log-in</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <nav class="nav-bar">
+                    <div>
+                        <h1>shopping</h1>
+                    </div>
+                    <ul class="first-ul">
+                        <li><a href="log-in.html">log-in</a></li>
+                        <li class="sign"><a href="sign-up.html">sign-up</a></li>
+                    </ul>
+                    <ul class="second-ul">
+                        <li id="membername">mahmoud</li>
+                        <li class="sign"><a href="log-in.html">log-out?</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="log-in-div">
+            <h2>Log-in</h2>
+            <div><input type="text" placeholder="username" id="username"></div>
+            <div><input type="password" placeholder="password" id="password"></div>
+            <div class="warning">
+                <p id="warning-message"></p>
+            </div>
+            <input onclick="verifyUser()" type="button" value="Log-in" id="submit">
+            <a href="sign-up.html">dont have account? sign-up now</a>
+        </div>
+
+
+        <script src="js/popper.min.js"></script>
+        <script src="js/jquery-3.6.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+
+</html>
