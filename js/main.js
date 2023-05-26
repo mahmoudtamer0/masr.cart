@@ -123,7 +123,7 @@ function drawingUiProducts() {
                             <span>Size: ${item.itemSize}</span>
                             <span>Price: ${item.itemPrice}</span>
                             <div class="item-add">
-                                <button>Add to cart</button>
+                                <button onclick="addedtocart(${item.id})">Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -132,3 +132,15 @@ function drawingUiProducts() {
     productsDOM.innerHTML = productsUI;
 };
 drawingUiProducts();
+
+function addedtocart(id) {
+    let choosenproduct = products.find((item) => item.id === id)
+    console.log(choosenproduct)
+}
+function checkedLoggedUser() {
+    if (username !== null) {
+        console.log('added')
+    } else {
+        window.location = 'log-in.html';
+    }
+}
