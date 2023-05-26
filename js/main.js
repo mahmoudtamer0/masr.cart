@@ -58,14 +58,17 @@ logoutbtn.onclick = function () {
 }
 
 // main page
+// cart moving
+
 let productsDOM = document.querySelector('.products-items');
+let itemsChoosed = document.querySelector('.items-choosed');
 let products = [
     {
         id: 1,
         imgsrcUrl: 'images/download.jpeg',
         itemTitle: 'camera',
         itemDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        itemPrice: '$5000',
+        itemPrice: 5000,
         itemSize: 'Large',
     },
     {
@@ -73,7 +76,7 @@ let products = [
         imgsrcUrl: 'images/download.jpeg',
         itemTitle: 'headphone sodo sd-1004',
         itemDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        itemPrice: '$1500',
+        itemPrice: 1500,
         itemSize: 'Large',
     },
     {
@@ -81,7 +84,7 @@ let products = [
         imgsrcUrl: 'images/download.jpeg',
         itemTitle: 'makeup',
         itemDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        itemPrice: '$500',
+        itemPrice: 500,
         itemSize: 'Small'
     },
     {
@@ -89,7 +92,7 @@ let products = [
         imgsrcUrl: 'images/download.jpeg',
         itemTitle: 'Rader',
         itemDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        itemPrice: '$2000',
+        itemPrice: 2000,
         itemSize: 'Large'
     },
     {
@@ -97,7 +100,7 @@ let products = [
         imgsrcUrl: 'images/download.jpeg',
         itemTitle: 'camera pro',
         itemDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        itemPrice: '$8000',
+        itemPrice: 8000,
         itemSize: 'Large'
     },
     {
@@ -105,7 +108,7 @@ let products = [
         imgsrcUrl: 'images/download.jpeg',
         itemTitle: 'headphone sodo sd-1007',
         itemDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        itemPrice: '$9000',
+        itemPrice: 9000,
         itemSize: 'Large'
     }
 ];
@@ -119,7 +122,7 @@ function drawingUiProducts() {
                         </div>
                         <div class="item-description">
                             <h2>${item.itemTitle}</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>${item.itemDescription}</p>
                             <span>Size: ${item.itemSize}</span>
                             <span>Price: ${item.itemPrice}</span>
                             <div class="item-add">
@@ -135,12 +138,35 @@ drawingUiProducts();
 
 function addedtocart(id) {
     let choosenproduct = products.find((item) => item.id === id)
-    console.log(choosenproduct)
+    itemsChoosed.innerHTML += `
+    <div class="item-choosed">
+            <div class="item-choosed-img"><img src="${choosenproduct.imgsrcUrl}" alt=""></div>
+                <div class="item-choosed-disc">
+                    <h1>${choosenproduct.itemTitle}</h1>
+                    <p>${choosenproduct.itemDescription}</p>
+                    <span>size : ${choosenproduct.itemSize}</span>
+                    <span>price: ${choosenproduct.itemPrice}</span>
+                </div>
+    </div>
+
+    `
+    let itemsChoosedArray = Array.from(document.querySelectorAll('.items-choosed .item-choosed'));
+    let cartCount = document.getElementById('cart-count').innerHTML = itemsChoosedArray.length;
+    // let totalprice = document.getElementById('totalofcart').innerHTML += Number(choosenproduct.itemPrice);
 }
-function checkedLoggedUser() {
-    if (username !== null) {
-        console.log('added')
-    } else {
-        window.location = 'log-in.html';
-    }
+// function checkedLoggedUser() {
+//     if (username == null) {
+//         window.location = 'log-in.html';
+//     } else {
+//         return 0;
+//     }
+// }
+let theSection = document.querySelector('.the-section');
+function cartXicon() {
+    // theSection.classList.add('right')
+    theSection.style.cssText = 'width:0;display:none;'
+}
+function carticontoright() {
+    // theSection.classList.remove('right')
+    theSection.style.cssText = 'width:30%;display:block;'
 }

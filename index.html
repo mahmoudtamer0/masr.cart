@@ -18,41 +18,51 @@
     </head>
 
     <body>
-        <section>
-            <div>nnnwkdakdj</div>
+        <section class="the-section">
+            <div class="x-icon"><i onclick="cartXicon()" id="x-icon" class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="items-choosed">
+
+            </div>
+            <!-- <div>
+                <p id="totalofcart">total: </p>
+            </div> -->
         </section>
-        <header>
-            <div class="container">
-                <nav class="nav-bar">
-                    <div>
-                        <h1>shopping</h1>
+        <div class="the-page">
+            <header>
+                <div class="container">
+                    <nav class="nav-bar">
+                        <div>
+                            <h1>shopping</h1>
+                        </div>
+                        <ul class="first-ul">
+                            <li><a href="log-in.html">log-in</a></li>
+                            <li class="sign"><a href="sign-up.html">sign-up</a></li>
+                        </ul>
+                        <ul class="second-ul">
+                            <li id="membername"></li>
+                            <li class="cart"><i class="fa-solid fa-cart-shopping" onclick="carticontoright()">
+                                </i> <span id="cart-count">0</span></li>
+                            <li class="sign"><button id="logout" href="log-in.html">log-out?</button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+
+            <div class="products">
+                <div class="container">
+                    <div class="main-title">
+                        <h2>Products.</h2>
                     </div>
-                    <ul class="first-ul">
-                        <li><a href="log-in.html">log-in</a></li>
-                        <li class="sign"><a href="sign-up.html">sign-up</a></li>
-                    </ul>
-                    <ul class="second-ul">
-                        <li id="membername"></li>
-                        <li class="cart"><i class="fa-solid fa-cart-shopping">
-                            </i> <span>2</span></li>
-                        <li class="sign"><button id="logout" href="log-in.html">log-out?</button>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-
-        <div class="products">
-            <div class="container">
-                <div class="main-title">
-                    <h2>Products.</h2>
-                </div>
-                <div class="products-items">
+                    <div class="products-items">
+                    </div>
                 </div>
             </div>
+
+
         </div>
-
 
 
 

@@ -100,6 +100,56 @@ li.cart span {
     font-weight: bold;
 }
 
+section {
+    position: absolute;
+    right: 0;
+    min-height: 100vh;
+    width: 0;
+    z-index: 1000;
+    background-color: white;
+    transition: 0.3s;
+    display: none;
+}
+
+section .x-icon {
+    display: flex;
+    justify-content: end;
+    padding: 20px 20px 0;
+}
+
+section .x-icon i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.item-choosed {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0;
+    display: flex;
+    margin: 20px;
+    width: 90%;
+    gap: 17px;
+    display: block;
+}
+
+.item-choosed-img {
+    width: 320px;
+}
+
+.item-choosed img {
+    max-width: 100%;
+    min-height: 100%
+}
+
+.item-choosed-disc {
+    padding: 10px;
+}
+
+.item-choosed span {
+    display: block;
+}
+
 /* products */
 .products {
     position: relative;
